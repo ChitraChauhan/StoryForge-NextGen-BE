@@ -6,7 +6,7 @@ import { HttpExceptionFilter } from './common/filters/http-exception.filter';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   const corsOrigins = (process.env.CORS_ORIGINS
-    || 'http://localhost:5173,http://localhost:3000')
+    || 'http://localhost:5173,http://localhost:3000, https://master.deo6e120nic47.amplifyapp.com/')
     .split(',')
     .map((origin) => origin.trim())
     .filter(Boolean);
